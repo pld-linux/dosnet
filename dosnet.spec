@@ -8,7 +8,7 @@ Summary:	A DOS emulator
 Summary(de):	DOS-Emulator
 Summary(es):	Emulador DOS
 Summary(fr):	Emulateur DOS
-Summary(pl):	Emulator DOSa
+Summary(pl):	Emulator DOS-a
 Summary(pt_BR):	Emulador DOS
 Summary(tr):	DOS öykünümcüsü
 Name:		dosnet
@@ -32,7 +32,7 @@ dosemu for more information.
 
 %description -l pl
 Modu³ dosnet.o dla kernela. Modu³ ten pozwala ³±czyæ siê programom
-DOSowym wykorzystuj±cym TCP/IP z Linuksem. Przydatny miêdzy innymi
+DOS-owym wykorzystuj±cym TCP/IP z Linuksem. Przydatny miêdzy innymi
 przy pisaniu programów sieciowych dla DOS-a. Rzeteln± informacjê na
 temat dosnet mo¿esz znale¼æ w README do dosemu.
 

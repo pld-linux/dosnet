@@ -1,6 +1,5 @@
 %define		_moddir		/lib/modules/%{_kernel_ver}/misc
 %define		_moddirsmp	/lib/modules/%{_kernel_ver}smp/misc
-%define		_rel		15
 Summary:	A DOS emulator
 Summary(de):	DOS-Emulator
 Summary(es):	Emulador DOS
@@ -10,6 +9,7 @@ Summary(pt_BR):	Emulador DOS
 Summary(tr):	DOS öykünümcüsü
 Name:		dosnet
 Version:	1.0.2
+%define	_rel	16
 Release:	%{_rel}
 Epoch:		1
 License:	GPL v2

@@ -21,6 +21,7 @@ Group:		Applications/Emulators
 Source0:	dosnet-%{version}.tar.gz
 # Source0-md5:	4932fa14e221071dafaae48656d35658
 ExclusiveArch:	%{ix86}
+BuildRequires:	rpmbuild(macros) >= 1.118
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Conflicts:	kernel < 2.0.28
 
@@ -107,16 +108,16 @@ install smp/dosnet.o $RPM_BUILD_ROOT%{_moddirsmp}
 rm -rf $RPM_BUILD_ROOT
 
 %post	-n kernel-net-dosnet
-/sbin/depmod -a %{!?_without_dist_kernel:-F /boot/System.map-%{_kernel_ver} }%{_kernel_ver}
+%depmod %{_kernel_ver}
 
 %postun	-n kernel-net-dosnet
-/sbin/depmod -a %{!?_without_dist_kernel:-F /boot/System.map-%{_kernel_ver} }%{_kernel_ver}
+%depmod %{_kernel_ver}
 
 %post	-n kernel-smp-net-dosnet
-/sbin/depmod -a %{!?_without_dist_kernel:-F /boot/System.map-%{_kernel_ver}smp }%{_kernel_ver}smp
+%depmod %{_kernel_ver}smp
 
 %postun	-n kernel-smp-net-dosnet
-/sbin/depmod -a %{!?_without_dist_kernel:-F /boot/System.map-%{_kernel_ver}smp }%{_kernel_ver}smp
+%depmod %{_kernel_ver}smp
 
 %files -n kernel-net-dosnet
 %defattr(644,root,root,755)

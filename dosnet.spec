@@ -9,7 +9,7 @@ Summary(pt_BR):	Emulador DOS
 Summary(tr):	DOS öykünümcüsü
 Name:		dosnet
 Version:	1.0.2
-%define	_rel	19
+%define	_rel	20
 Release:	%{_rel}
 Epoch:		1
 License:	GPL v2
@@ -115,8 +115,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -n kernel-net-dosnet
 %defattr(644,root,root,755)
-%{_moddir}/dosnet.o
+%{_moddir}/dosnet.o*
 
 %files -n kernel-smp-net-dosnet
 %defattr(644,root,root,755)
-%{_moddirsmp}/dosnet.o
+%{_moddirsmp}/dosnet.o*

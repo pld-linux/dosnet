@@ -9,7 +9,7 @@ Summary(pt_BR):	Emulador DOS
 Summary(tr):	DOS öykünümcüsü
 Name:		dosnet
 Version:	1.0.2
-%define	_rel	18
+%define	_rel	19
 Release:	%{_rel}
 Epoch:		1
 License:	GPL v2

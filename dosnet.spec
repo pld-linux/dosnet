@@ -1,3 +1,7 @@
+#
+# Conditional build:
+# _without_dist_kernel	- without kernel from distribution
+#
 %define		_moddir		/lib/modules/%{_kernel_ver}/misc
 %define		_moddirsmp	/lib/modules/%{_kernel_ver}smp/misc
 Summary:	A DOS emulator
@@ -35,8 +39,8 @@ Summary:	kernel module dosnet.o
 Summary(pl):	Modu³ dosnet.o do kernela
 Release:	%{_rel}@%{_kernel_ver_str}
 Group:		Applications/Emulators
-Prereq:		/sbin/depmod
 %{!?_without_dist_kernel:%requires_releq_kernel_up}
+Requires(post,postun):	/sbin/depmod
 #Requires:	%{name} = %{version}
 Obsoletes:	dosnet
 
@@ -56,8 +60,8 @@ Summary:	kernel-smp module dosnet.o
 Summary(pl):	Modu³ dosnet.o do kernela SMP
 Release:	%{_rel}@%{_kernel_ver_str}
 Group:		Applications/Emulators
-Prereq:		/sbin/depmod
 %{!?_without_dist_kernel:%requires_releq_kernel_smp}
+Requires(post,postun):	/sbin/depmod
 #Requires:	%{name} = %{version}
 Obsoletes:	dosnet
 
@@ -102,16 +106,16 @@ install smp/dosnet.o $RPM_BUILD_ROOT%{_moddirsmp}
 rm -rf $RPM_BUILD_ROOT
 
 %post	-n kernel-net-dosnet
-/sbin/depmod -a
+/sbin/depmod -a -F /boot/System.map-%{_kernel_ver} %{_kernel_ver}
 
 %postun	-n kernel-net-dosnet
-/sbin/depmod -a
+/sbin/depmod -a -F /boot/System.map-%{_kernel_ver} %{_kernel_ver}
 
 %post	-n kernel-smp-net-dosnet
-/sbin/depmod -a
+/sbin/depmod -a -F /boot/System.map-%{_kernel_ver}smp %{_kernel_ver}smp
 
 %postun	-n kernel-smp-net-dosnet
-/sbin/depmod -a
+/sbin/depmod -a -F /boot/System.map-%{_kernel_ver}smp %{_kernel_ver}smp
 
 %files -n kernel-net-dosnet
 %defattr(644,root,root,755)

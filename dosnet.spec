@@ -19,6 +19,7 @@ Epoch:		1
 License:	GPL v2
 Group:		Applications/Emulators
 Source0:	dosnet-%{version}.tar.gz
+# Source0-md5:	4932fa14e221071dafaae48656d35658
 ExclusiveArch:	%{ix86}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Conflicts:	kernel < 2.0.28

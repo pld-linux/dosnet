@@ -12,7 +12,7 @@ Name:		dosnet
 Version:	1.0.2
 Release:	%{_rel}
 Epoch:		1
-License:	GPLv2
+License:	GPL v2
 Group:		Applications/Emulators
 Source0:	dosnet-%{version}.tar.gz
 ExclusiveArch:	%{ix86}

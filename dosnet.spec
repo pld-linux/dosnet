@@ -1,6 +1,6 @@
 %define		_moddir		/lib/modules/%{_kernel_ver}/misc
 %define		_moddirsmp	/lib/modules/%{_kernel_ver}smp/misc
-%define		_rel		14
+%define		_rel		15
 Summary:	A DOS emulator
 Summary(de):	DOS-Emulator
 Summary(es):	Emulador DOS
@@ -37,7 +37,7 @@ Release:	%{_rel}@%{_kernel_ver_str}
 Group:		Applications/Emulators
 Prereq:		/sbin/depmod
 %{!?_without_dist_kernel:%requires_releq_kernel_up}
-Requires:	%{name} = %{version}
+#Requires:	%{name} = %{version}
 Obsoletes:	dosnet
 
 %description -n kernel-net-dosnet
@@ -58,7 +58,7 @@ Release:	%{_rel}@%{_kernel_ver_str}
 Group:		Applications/Emulators
 Prereq:		/sbin/depmod
 %{!?_without_dist_kernel:%requires_releq_kernel_smp}
-Requires:	%{name} = %{version}
+#Requires:	%{name} = %{version}
 Obsoletes:	dosnet
 
 %description -n kernel-smp-net-dosnet

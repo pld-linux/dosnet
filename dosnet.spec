@@ -1,6 +1,6 @@
 #
 # Conditional build:
-# _without_dist_kernel	- without kernel from distribution
+%bcond_without	dist_kernel	# without kernel from distribution
 #
 %define		_moddir		/lib/modules/%{_kernel_ver}/misc
 %define		_moddirsmp	/lib/modules/%{_kernel_ver}smp/misc
@@ -41,7 +41,7 @@ Summary:	Kernel module dosnet.o
 Summary(pl):	Modu³ j±dra dosnet.o
 Release:	%{_rel}@%{_kernel_ver_str}
 Group:		Applications/Emulators
-%{!?_without_dist_kernel:%requires_releq_kernel_up}
+%{?with_dist_kernel:%requires_releq_kernel_up}
 Requires(post,postun):	/sbin/depmod
 #Requires:	%{name} = %{version}
 Obsoletes:	dosnet
@@ -62,7 +62,7 @@ Summary:	SMP kernel module dosnet.o
 Summary(pl):	Wersja SMP modu³u j±dra dosnet.o
 Release:	%{_rel}@%{_kernel_ver_str}
 Group:		Applications/Emulators
-%{!?_without_dist_kernel:%requires_releq_kernel_smp}
+%{?with_dist_kernel:%requires_releq_kernel_smp}
 Requires(post,postun):	/sbin/depmod
 #Requires:	%{name} = %{version}
 Obsoletes:	dosnet

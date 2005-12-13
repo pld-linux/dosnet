@@ -18,7 +18,7 @@ Release:	%{_rel}
 Epoch:		1
 License:	GPL v2
 Group:		Applications/Emulators
-Source0:	dosnet-%{version}.tar.gz
+Source0:	%{name}-%{version}.tar.gz
 # Source0-md5:	4932fa14e221071dafaae48656d35658
 ExclusiveArch:	%{ix86}
 BuildRequires:	rpmbuild(macros) >= 1.118
@@ -69,8 +69,8 @@ Obsoletes:	dosnet
 
 %description -n kernel-smp-net-dosnet
 SMP version of kernel module for dosnet (vnet). Dosnet lets you
-establish TCP/IP connection between dosemu session and Linux
-kernel. Read README for dosemu for more information.
+establish TCP/IP connection between dosemu session and Linux kernel.
+Read README for dosemu for more information.
 
 %description -n kernel-smp-net-dosnet -l pl
 Wersja SMP modu³u j±dra dosnet.o. Modu³ ten pozwala ³±czyæ siê
@@ -79,7 +79,7 @@ innymi przy pisaniu programów sieciowych dla DOS-a. Rzeteln±
 informacjê na temat dosnet mo¿na znale¼æ w README do dosemu.
 
 %prep
-%setup -q -n dosnet
+%setup -q -n %{name}
 
 %build
 OPTFLAGS="%{rpmcflags} %{!?debug:-fomit-frame-pointer}"; export OPTFLAGS

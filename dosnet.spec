@@ -5,12 +5,12 @@
 %define		_moddir		/lib/modules/%{_kernel_ver}/misc
 %define		_moddirsmp	/lib/modules/%{_kernel_ver}smp/misc
 Summary:	A DOS emulator
-Summary(de.UTF-8):   DOS-Emulator
-Summary(es.UTF-8):   Emulador DOS
-Summary(fr.UTF-8):   Emulateur DOS
-Summary(pl.UTF-8):   Emulator DOS-a
-Summary(pt_BR.UTF-8):   Emulador DOS
-Summary(tr.UTF-8):   DOS öykünümcüsü
+Summary(de.UTF-8):	DOS-Emulator
+Summary(es.UTF-8):	Emulador DOS
+Summary(fr.UTF-8):	Emulateur DOS
+Summary(pl.UTF-8):	Emulator DOS-a
+Summary(pt_BR.UTF-8):	Emulador DOS
+Summary(tr.UTF-8):	DOS öykünümcüsü
 Name:		dosnet
 Version:	1.0.2
 %define	_rel	22
@@ -38,7 +38,7 @@ temat dosnet możesz znaleźć w README do dosemu.
 
 %package -n kernel-net-dosnet
 Summary:	Kernel module dosnet.o
-Summary(pl.UTF-8):   Moduł jądra dosnet.o
+Summary(pl.UTF-8):	Moduł jądra dosnet.o
 Release:	%{_rel}@%{_kernel_ver_str}
 Group:		Applications/Emulators
 %{?with_dist_kernel:%requires_releq_kernel_up}
@@ -59,7 +59,7 @@ dosnet można znaleźć w README do dosemu.
 
 %package -n kernel-smp-net-dosnet
 Summary:	SMP kernel module dosnet.o
-Summary(pl.UTF-8):   Wersja SMP modułu jądra dosnet.o
+Summary(pl.UTF-8):	Wersja SMP modułu jądra dosnet.o
 Release:	%{_rel}@%{_kernel_ver_str}
 Group:		Applications/Emulators
 %{?with_dist_kernel:%requires_releq_kernel_smp}

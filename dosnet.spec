@@ -5,12 +5,12 @@
 %define		_moddir		/lib/modules/%{_kernel_ver}/misc
 %define		_moddirsmp	/lib/modules/%{_kernel_ver}smp/misc
 Summary:	A DOS emulator
-Summary(de):	DOS-Emulator
-Summary(es):	Emulador DOS
-Summary(fr):	Emulateur DOS
-Summary(pl):	Emulator DOS-a
-Summary(pt_BR):	Emulador DOS
-Summary(tr):	DOS öykünümcüsü
+Summary(de.UTF-8):   DOS-Emulator
+Summary(es.UTF-8):   Emulador DOS
+Summary(fr.UTF-8):   Emulateur DOS
+Summary(pl.UTF-8):   Emulator DOS-a
+Summary(pt_BR.UTF-8):   Emulador DOS
+Summary(tr.UTF-8):   DOS Ã¶ykÃ¼nÃ¼mcÃ¼sÃ¼
 Name:		dosnet
 Version:	1.0.2
 %define	_rel	22
@@ -30,15 +30,15 @@ Kernel module for dosnet (vnet). Dosnet lets you establish TCP/IP
 connection between dosemu session and Linux kernel. Read README for
 dosemu for more information.
 
-%description -l pl
-Modu³ dosnet.o dla kernela. Modu³ ten pozwala ³±czyæ siê programom
-DOS-owym wykorzystuj±cym TCP/IP z Linuksem. Przydatny miêdzy innymi
-przy pisaniu programów sieciowych dla DOS-a. Rzeteln± informacjê na
-temat dosnet mo¿esz znale¼æ w README do dosemu.
+%description -l pl.UTF-8
+ModuÅ‚ dosnet.o dla kernela. ModuÅ‚ ten pozwala Å‚Ä…czyÄ‡ siÄ™ programom
+DOS-owym wykorzystujÄ…cym TCP/IP z Linuksem. Przydatny miÄ™dzy innymi
+przy pisaniu programÃ³w sieciowych dla DOS-a. RzetelnÄ… informacjÄ™ na
+temat dosnet moÅ¼esz znaleÅºÄ‡ w README do dosemu.
 
 %package -n kernel-net-dosnet
 Summary:	Kernel module dosnet.o
-Summary(pl):	Modu³ j±dra dosnet.o
+Summary(pl.UTF-8):   ModuÅ‚ jÄ…dra dosnet.o
 Release:	%{_rel}@%{_kernel_ver_str}
 Group:		Applications/Emulators
 %{?with_dist_kernel:%requires_releq_kernel_up}
@@ -51,15 +51,15 @@ Kernel module for dosnet (vnet). Dosnet lets you establish TCP/IP
 connection between dosemu session and Linux kernel. Read README for
 dosemu for more information.
 
-%description -n kernel-net-dosnet -l pl
-Modu³ j±dra dosnet.o. Modu³ ten pozwala ³±czyæ siê programom DOS-owym
-wykorzystuj±cym TCP/IP z Linuksem. Przydatny miêdzy innymi przy
-pisaniu programów sieciowych dla DOS-a. Rzeteln± informacjê na temat
-dosnet mo¿na znale¼æ w README do dosemu.
+%description -n kernel-net-dosnet -l pl.UTF-8
+ModuÅ‚ jÄ…dra dosnet.o. ModuÅ‚ ten pozwala Å‚Ä…czyÄ‡ siÄ™ programom DOS-owym
+wykorzystujÄ…cym TCP/IP z Linuksem. Przydatny miÄ™dzy innymi przy
+pisaniu programÃ³w sieciowych dla DOS-a. RzetelnÄ… informacjÄ™ na temat
+dosnet moÅ¼na znaleÅºÄ‡ w README do dosemu.
 
 %package -n kernel-smp-net-dosnet
 Summary:	SMP kernel module dosnet.o
-Summary(pl):	Wersja SMP modu³u j±dra dosnet.o
+Summary(pl.UTF-8):   Wersja SMP moduÅ‚u jÄ…dra dosnet.o
 Release:	%{_rel}@%{_kernel_ver_str}
 Group:		Applications/Emulators
 %{?with_dist_kernel:%requires_releq_kernel_smp}
@@ -72,11 +72,11 @@ SMP version of kernel module for dosnet (vnet). Dosnet lets you
 establish TCP/IP connection between dosemu session and Linux kernel.
 Read README for dosemu for more information.
 
-%description -n kernel-smp-net-dosnet -l pl
-Wersja SMP modu³u j±dra dosnet.o. Modu³ ten pozwala ³±czyæ siê
-programom DOS-owym wykorzystuj±cym TCP/IP z Linuksem. Przydatny miêdzy
-innymi przy pisaniu programów sieciowych dla DOS-a. Rzeteln±
-informacjê na temat dosnet mo¿na znale¼æ w README do dosemu.
+%description -n kernel-smp-net-dosnet -l pl.UTF-8
+Wersja SMP moduÅ‚u jÄ…dra dosnet.o. ModuÅ‚ ten pozwala Å‚Ä…czyÄ‡ siÄ™
+programom DOS-owym wykorzystujÄ…cym TCP/IP z Linuksem. Przydatny miÄ™dzy
+innymi przy pisaniu programÃ³w sieciowych dla DOS-a. RzetelnÄ…
+informacjÄ™ na temat dosnet moÅ¼na znaleÅºÄ‡ w README do dosemu.
 
 %prep
 %setup -q -n %{name}
